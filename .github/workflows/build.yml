@@ -1,0 +1,13 @@
+name: build
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          pip install requests==99.0.0
+      - name: Build
+        run: echo "Build complete"
